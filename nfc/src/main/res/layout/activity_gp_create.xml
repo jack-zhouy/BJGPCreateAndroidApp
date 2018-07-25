@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical" >
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/main_srl"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+    <ScrollView
+        android:layout_above="@+id/llybuttom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="钢瓶建档"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/msgText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text=""
+                    android:editable="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/imageView_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/abs__menu_dropdown_panel_holo_light" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_bottle" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="钢瓶编码："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <Spinner
+                    android:id="@+id/spinner_gp_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/spinner_array_gp_head" />
+                <EditText
+                    android:id="@+id/editText_gpbm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="填入钢瓶编码"
+                    android:textColor="@color/colorAccent"
+                    android:background="@null"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_bottle" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="出厂编码："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/editText_ccbm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="填入出厂编码"
+                    android:textColor="@color/colorAccent"
+                    android:background="@null"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_bottle" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="钢瓶规格："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/textview_payType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Spinner
+                        android:id="@+id/spinner_payType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spinner_array_gp_type" />
+                </FrameLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_bottle" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="生产厂家："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/textview_factory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Spinner
+                        android:id="@+id/spinner_factory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:id="@+id/ll_scrq"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="生产日期："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/editText_ccrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint=""
+                    android:layout_weight="1"
+                    android:maxLength="8"
+                    android:inputType="number"
+                    android:textColor="@color/colorAccent"
+                    android:background="@null"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/imageView_scrq"
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/icon_date" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:id="@+id/ll_scgj"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_time" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="上次钢检："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/editText_scgj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint=""
+                    android:layout_weight="1"
+                    android:maxLength="8"
+                    android:inputType="number"
+                    android:textColor="@color/colorAccent"
+                    android:background="@null"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/imageView_scgj"
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/icon_date" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:id="@+id/ll_xcgj"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_time" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="下次钢检："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/editText_xcgj"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint=""
+                    android:maxLength="8"
+                    android:inputType="number"
+                    android:textColor="@color/colorAccent"
+                    android:background="@null"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:id="@+id/ll_bfrq"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_time" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="报废日期："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/editText_bfrq"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint=""
+                    android:textColor="@color/colorAccent"
+                    android:background="@null"
+                    android:maxLength="8"
+                    android:inputType="number"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_history_orser" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="读取标签："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/editText_readbq"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint=""
+                    android:textColor="@color/colorAccent"
+                    android:background="@null"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/textgray" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:id="@+id/llybuttom"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/button_select"
+            android:padding="10dp"
+            android:text="创建档案"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>

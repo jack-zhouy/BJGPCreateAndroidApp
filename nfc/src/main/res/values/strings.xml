@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">百江建档</string>
+    <string-array name="spinner_array_gp_type">
+        <item>5公斤</item>
+        <item>15公斤</item>
+        <item>50公斤</item>
+    </string-array>
+
+    <string-array name="spinner_array_gp_head">
+        <item>KMA2B</item>
+        <item>KMA</item>
+    </string-array>
+</resources>
